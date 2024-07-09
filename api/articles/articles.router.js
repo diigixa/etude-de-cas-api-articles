@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ArticleController = require('./articles.controller');
-const authMiddleware = require('../middleware/auth');
+const authMiddleware = require('../middlewares/auth');
 
 router.post('/articles', authMiddleware, ArticleController.createArticle);
 router.put('/articles/:id', authMiddleware, ArticleController.updateArticle);
